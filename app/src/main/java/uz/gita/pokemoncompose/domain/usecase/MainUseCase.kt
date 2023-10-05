@@ -1,0 +1,1 @@
+package uz.gita.pokemoncompose.domain.usecaseimport kotlinx.coroutines.flow.Flowimport uz.gita.pokemoncompose.domain.modules.MainModelinterface MainUseCase {    fun getCategories(): Flow<Result<List<String>>>    fun getCategoryData(category: String): Flow<Result<List<MainModel>>>}
