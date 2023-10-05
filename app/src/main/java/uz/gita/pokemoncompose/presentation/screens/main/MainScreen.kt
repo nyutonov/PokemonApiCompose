@@ -20,6 +20,7 @@ class MainScreen : AndroidScreen() {
     @Composable
     override fun Content() {
         val viewModel: MainContract.ViewModel = getViewModel<MainViewModel>()
+
         MainContent(uiState = viewModel.uiState.collectAsState())
     }
 }
