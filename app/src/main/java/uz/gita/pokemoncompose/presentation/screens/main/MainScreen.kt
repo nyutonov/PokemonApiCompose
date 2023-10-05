@@ -40,7 +40,9 @@ private fun MainContent(
     ) {
         LazyColumn {
             items(uiState.mainData) {
-                Item(it)
+                Item(it) {
+                    onEventDispatcher.invoke(MainContract.Intent.ClickItem(it))
+                }
             }
         }
     }
