@@ -27,7 +27,6 @@ class MainRepositoryImpl @Inject constructor(
 
             if (!name.contains("component") && name != "copy" && name != "equals" && name != "hashCode" && name != "toString") {
                 name = name.replace("_", " ").capitalize()
-
                 list.add(name)
             }
 
