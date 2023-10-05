@@ -1,1 +1,1 @@
-package uz.gita.pokemoncompose.domain.modulesimport uz.gita.pokemoncompose.data.source.remote.response.Resultdata class MainModel(    val data: Result)
+package uz.gita.pokemoncompose.domain.modulesdata class MainModel(    val name: String,    val url: String)

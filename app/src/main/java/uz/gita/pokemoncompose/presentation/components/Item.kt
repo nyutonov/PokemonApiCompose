@@ -1,5 +1,6 @@
     package uz.gita.pokemoncompose.presentation.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -25,7 +26,8 @@ fun Item(
         modifier = Modifier
             .height(56.dp)
             .fillMaxWidth()
-            .padding(5.dp)
+            .clickable { onClick.invoke(text) }
+            .padding(10.dp)
     ) {
         Card(
             modifier = Modifier

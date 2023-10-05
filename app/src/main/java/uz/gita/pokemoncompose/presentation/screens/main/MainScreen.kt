@@ -1,6 +1,7 @@
 package uz.gita.pokemoncompose.presentation.screens.main
 
 import android.annotation.SuppressLint
+import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
@@ -21,31 +22,35 @@ class MainScreen : AndroidScreen() {
     override fun Content() {
         val viewModel: MainContract.ViewModel = getViewModel<MainViewModel>()
 
-        MainContent(uiState = viewModel.uiState.collectAsState())
+        MainContent(
+            viewModel.uiState.collectAsState().value,
+            viewModel::onEventDispatcher
+        )
     }
 }
 
 @Composable
 private fun MainContent(
-    uiState: State<MainContract.UIState>,
+    uiState: MainContract.UIState = MainContract.UIState(),
+    onEventDispatcher: (MainContract.Intent) -> Unit = {}
 ) {
     Box(
         modifier = Modifier
             .fillMaxSize()
     ) {
         LazyColumn {
-            items(uiState.value.mainData) {
+            items(uiState.mainData) {
                 Item(it)
             }
         }
     }
 }
-//1
+
 @SuppressLint("UnrememberedMutableState")
 @Composable
 @Preview(showBackground = true)
 private fun MainContentPreview() {
     PokemonComposeTheme {
-        MainContent(mutableStateOf(MainContract.UIState(listOf())))
+        MainContent()
     }
 }
