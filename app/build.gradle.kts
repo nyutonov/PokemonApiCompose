@@ -1,16 +1,18 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
     namespace = "uz.gita.pokemoncompose"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "uz.gita.pokemoncompose"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -30,11 +32,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -66,4 +68,34 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+
+    // Voyager
+    val voyagerVersion = "1.0.0-rc05"
+    implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-transitions:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-hilt:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-androidx:$voyagerVersion")
+
+    // Hilt
+    implementation("com.google.dagger:hilt-android:2.44.2")
+    kapt("com.google.dagger:hilt-compiler:2.44")
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    // GSON
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // Coroutine
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines - android:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines - core:1.7.3")
+
+    // Chucker
+    debugImplementation("com.github.chuckerteam.chucker:library:4.0.0")
+    releaseImplementation("com.github.chuckerteam.chucker:library-no - op:4.0.0")
+
+    // Glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("com.github.bumptech.glide:compose:1.0.0-beta01")
+
 }
