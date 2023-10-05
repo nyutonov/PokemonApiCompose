@@ -11,10 +11,13 @@ interface DetailContract {
     }
 
     interface Intent {
-
+        data class SetCategory(
+            val category: String
+        ) : Intent
     }
 
     data class UIState(
-        val data: List<MainModel> = listOf()
+        val data: List<MainModel> = listOf(),
+        val category: String = ""
     )
 }
