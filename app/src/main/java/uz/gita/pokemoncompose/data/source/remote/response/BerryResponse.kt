@@ -1,0 +1,1 @@
+package uz.gita.pokemoncompose.data.source.remote.responsedata class BerryResponse(    val count: Int,    val next: String,    val previous: Any,    val results: List<ResultX>)

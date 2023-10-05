@@ -1,0 +1,1 @@
+package uz.gita.pokemoncompose.data.source.remote.responsedata class ResultXX(    val name: String,    val url: String)
