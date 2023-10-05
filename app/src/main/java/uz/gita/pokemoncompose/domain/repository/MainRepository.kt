@@ -1,1 +1,1 @@
-package uz.gita.pokemoncompose.domain.repositoryimport kotlinx.coroutines.flow.Flowinterface MainRepository {    //fun getMain(): Flow<>}
+package uz.gita.pokemoncompose.domain.repositoryimport kotlinx.coroutines.flow.Flowimport uz.gita.pokemoncompose.domain.modules.MainModelinterface MainRepository {    fun getCategories(): Flow<Result<List<String>>>    fun getCategoryData(category: String): Flow<Result<List<MainModel>>>}

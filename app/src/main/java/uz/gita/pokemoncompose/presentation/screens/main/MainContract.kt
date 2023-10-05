@@ -23,8 +23,3 @@ interface MainContract {
         suspend fun openDetailScreen()
     }
 }
-
-
-//for (prop in MainResponse::class.memberProperties) {
-//    println("${prop.name} = ${prop.get(user)}")
-//}
