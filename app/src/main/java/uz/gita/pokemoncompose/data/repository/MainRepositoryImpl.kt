@@ -21,7 +21,7 @@ class MainRepositoryImpl @Inject constructor(
 
         if (response.isSuccessful && response.body() != null) {
             val list = arrayListOf<String>()
-
+//123
             for (prop in response::class.members) {
                 list.add(prop.name)
             }
