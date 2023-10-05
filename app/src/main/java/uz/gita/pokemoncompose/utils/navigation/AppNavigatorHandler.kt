@@ -1,0 +1,1 @@
+package uz.gita.pokemoncompose.utils.navigationimport cafe.adriel.voyager.navigator.Navigatorimport kotlinx.coroutines.flow.SharedFlowtypealias NavigationArgs = Navigator.() -> Unitinterface AppNavigatorHandler {    val uiNavigator: SharedFlow<NavigationArgs>}

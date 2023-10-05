@@ -1,0 +1,1 @@
+package uz.gita.pokemoncompose.utils.navigationimport cafe.adriel.voyager.androidx.AndroidScreentypealias MyScreen = AndroidScreeninterface AppNavigator {    suspend fun openWithSave(myScreen: MyScreen)    suspend fun openWithoutSave(myScreen: MyScreen)    suspend fun back()}

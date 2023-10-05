@@ -1,0 +1,1 @@
+package uz.gita.pokemoncompose.presentation.screens.detailimport androidx.compose.runtime.Composableimport cafe.adriel.voyager.androidx.AndroidScreenclass DetailScreen : AndroidScreen() {    @Composable    override fun Content() {    }}

@@ -1,0 +1,1 @@
+package uz.gita.pokemoncompose.presentation.screens.mainimport javax.inject.Injectinterface MainDirection {    suspend fun moveToDetail()}class MainDirectionImpl @Inject constructor() : MainDirection {    override suspend fun moveToDetail() {    }}

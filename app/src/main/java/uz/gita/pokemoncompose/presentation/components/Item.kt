@@ -1,4 +1,4 @@
-package uz.gita.pokemoncompose.presentation.components
+    package uz.gita.pokemoncompose.presentation.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
