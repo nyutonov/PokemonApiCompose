@@ -1,1 +1,0 @@
-package uz.gita.pokemoncompose.data.source.remote.responsedata class AbilityRespnse(    val count: Int,    val next: String,    val previous: Any,    val results: List<Result>)
