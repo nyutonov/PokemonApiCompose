@@ -17,8 +17,4 @@ interface MainContract {
             val item: String,
         ) : Intent
     }
-
-    interface Direction {
-        suspend fun openDetailScreen()
-    }
 }
