@@ -14,10 +14,14 @@ interface DetailContract {
         data class SetCategory(
             val category: String
         ) : Intent
+
+        object GetAll : Intent
     }
 
     data class UIState(
         val data: List<MainModel> = listOf(),
-        val category: String = ""
+        val category: String = "",
+        val isProgress: Boolean = true,
+        val isShow: Boolean = false
     )
 }

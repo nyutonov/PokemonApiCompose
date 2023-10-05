@@ -32,7 +32,6 @@ class MainRepositoryImpl @Inject constructor(
             }
 
             emit(Result.success(list))
-
         }
     }
         .catch { emit(Result.failure(it)) }
